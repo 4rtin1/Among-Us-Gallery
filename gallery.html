@@ -1,1 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<html>
+<head>
+<title>BBC Home Page</title>
+<style>
+body {
+	margin: 0;
+}
+.topbar {
+  position: absolute;
+  width: 100%;
+  height: 14%;
+  top: 0;
+  background: #2E3060;
+}
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  top: 4%;
+  left: 81.5%;
+  font-size: 300%;
+  color: #ffffff;
+  display: inline-flex;
+  font-family: "Courier",monospace;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 200%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  left: 0%;
+  top: 135%;
+  animation-name: dropdown;
+  animation-duration: 0.5s;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.Home {
+  align-items: center;
+  appearance: none;
+  background-color: #2E3060;
+  border-radius: 4px;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Courier",monospace;
+  height: 10%;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: absolute;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 350%;
+  top: 2%;
+  left: 55%;
+  width: 10%;
+}
+.About {
+  align-items: center;
+  appearance: none;
+  background-color: #2E3060;
+  border-radius: 4px;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Courier",monospace;
+  height: 10%;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: shown;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: absolute;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 300%;
+  top: 2%;
+  left: 67.5%;
+  width: 10%;
+}
+.logo {
+	position: absolute;
+	width: 10%;
+	height: 20%;
+	background: transparent;
+	border: transparent;
+}
+img {
+	top: -37.5%;
+	left: -17.5%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.border1 {
+	position: absolute;
+	width: 0.2%;
+	height: 14%;
+	background-color: #ffffff;
+	left: 65%;
+}
+.border2 {
+	position: absolute;
+	width: 0.2%;
+	height: 14%;
+	background-color: #ffffff;
+	left: 80%;
+}
+.border3 {
+	position: absolute;
+	width: 0.2%;
+	height: 14%;
+	background-color: #ffffff;
+	left: 97.5%;
+}
 
+.border4 {
+	position: absolute;
+	width: 0.2%;
+	height: 14%;
+	background-color: #ffffff;
+	left: 55%;
+	z-index: 10;
+}
+.dropdownarrow {
+	position: absolute;
+	left: 94.5%;
+	top: 5%;
+	font-size: 200%;
+	color: #ffffff;
+}
+.Gallery {
+	position: absolute;
+	top: 25%;
+	width: 100%;
+	height: 24%;
+	display: inline-flex;
+	font-family: "Courier",monospace;
+	justify-content: center;
+	font-size: 40%;
+	background-color: #f5f5f5;
+	border-color: #bbbbbb;
+}
+.title {
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	font-size: 45%;
+	color: #000000;
+	left: 25%;
+}
+.border5 {
+	position: absolute;
+	top: 22%;
+	height: 2%;
+	width: 100%;
+	background-color: #777777;
+}
+
+@keyframes dropdown {
+	from {height: 0%;}
+	to {height: 200%;}
+}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<button class="logo" onclick="home()"><img src="logo2.png" /></button>
+
+<script type="text/javascript">
+	function home() {
+		location.href = "index.html";
+	};
+	function about() {
+		location.href = "about.html";
+	};
+	function gallery() {
+		location.href = "gallery.html";
+	};
+</script>
+
+<div class="border1"></div>
+<div class="border2"></div>
+<div class="border3"></div>
+<div class="border4"></div>
+<button class="Home" onclick="home()">Home</button>
+<button class="About" onclick="about()">About Us</button>
+<div class="dropdown">
+	<span>Projects</span>
+	<div class="dropdown-content">
+	<button class="Gallery" onclick="gallery()">Gallery</button>
+	<div class="border5"></div>
+	<div class="title">Projects:</div>
+	</div>
+</div>
+<div class="dropdownarrow">▶</div>
+</body>
+</html>
