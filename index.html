@@ -36,7 +36,7 @@ body {
   animation-name: dropdown;
   animation-duration: 0.5s;
 }
-.dropdown:hover .dropdown-content {
+.dropdown:hover, .dropdown:focus .dropdown-content {
   display: block;
 }
 .Home {
@@ -202,6 +202,9 @@ img {
 	function gallery() {
 		location.href = "gallery.html";
 	};
+	function dropdown() {
+	document.getElementById("drop").classlist.toggle("show");
+	};
 </script>
 
 <div class="border1"></div>
@@ -211,7 +214,7 @@ img {
 <button class="Home" onclick="home()">Home</button>
 <button class="About" onclick="about()">About Us</button>
 <div class="dropdown">
-	<span>Projects</span>
+	<button onclick="dropdown()" class="drop">Projects</button>
 	<div class="dropdown-content">
 	<button class="Gallery" onclick="gallery()">Gallery</button>
 	<div class="border5"></div>
