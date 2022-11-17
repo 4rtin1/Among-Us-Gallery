@@ -5,7 +5,6 @@
 <title>BBC Home Page</title>
 <style>
 body {
-	background-image:url('./Images/star-field-background.gif'); background-attachment:fixed; background-size:cover;
 	margin: 0;
 }
 .topbar {
@@ -69,7 +68,7 @@ body {
   will-change: box-shadow,transform;
   font-size: 350%;
   top: 2%;
-  left: 55%;
+  left: 30%;
   width: 10%;
 }
 .About {
@@ -101,7 +100,39 @@ body {
   will-change: box-shadow,transform;
   font-size: 300%;
   top: 2%;
-  left: 67.5%;
+  left: 66%;
+  width: 10%;
+}
+.Employees {
+  align-items: center;
+  appearance: none;
+  background-color: #2E3060;
+  border-radius: 4px;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Courier",monospace;
+  height: 10%;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: shown;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: absolute;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 300%;
+  top: 2%;
+  left: 46%;
   width: 10%;
 }
 .logo {
@@ -123,7 +154,7 @@ img {
 	width: 0.2%;
 	height: 14%;
 	background-color: #ffffff;
-	left: 65%;
+	left: 61%;
 }
 .border2 {
 	position: absolute;
@@ -145,7 +176,7 @@ img {
 	width: 0.2%;
 	height: 14%;
 	background-color: #ffffff;
-	left: 55%;
+	left: 41%;
 	z-index: 10;
 }
 .dropdownarrow {
@@ -191,7 +222,7 @@ img {
 </head>
 <body>
 <div class="topbar"></div>
-<button class="logo" onclick="home()"><img src="./Images/logo2.png" /></button>
+<button class="logo" onclick="home()"><img src="logo2.png" /></button>
 
 <script type="text/javascript">
 	function home() {
@@ -202,6 +233,9 @@ img {
 	};
 	function gallery() {
 		location.href = "gallery.html";
+	};
+	function employees() {
+		location.href = "employees.html";
 	};
 	function dropdown() {
 	document.getElementById("drop").classlist.toggle("show");
@@ -214,6 +248,7 @@ img {
 <div class="border4"></div>
 <button class="Home" onclick="home()">Home</button>
 <button class="About" onclick="about()">About Us</button>
+<button class="Employees" onclick="employees()">Employees</button>
 <div class="dropdown">
 	<button onclick="dropdown()" class="drop">Projects</button>
 	<div class="dropdown-content">
