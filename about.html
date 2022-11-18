@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <html>
-<title>BBC About Us</title>
+<title>BBC Home</title>
 <head>
 <style>
 body {
@@ -40,70 +40,88 @@ body {
   display: block;
 }
 .Home {
-  align-items: center;
-  appearance: none;
-  background-color: #90D8BB;
+  display: inline-block;
   border-radius: 4px;
-  border-width: 0;
-  box-sizing: border-box;
-  color: #ffffff;
+  background-color: #90D8BB;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-size: 35px;
+  padding: 20px;
+  width: 11%;
+  height: 14%;
+  transition: all 0.5s;
   cursor: pointer;
-  display: inline-flex;
-  font-family: "Courier",monospace;
-  height: 10%;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
   position: absolute;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 350%;
-  top: 2%;
-  left: 55%;
-  width: 10%;
+  margin: 5px;
+  z-index: 10;
+  left: 34.3%;
+  top: -0.7%;
+}
+.Home span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+.Home span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+.Home:hover span {
+	padding-right: 25px;
+}
+.Home:hover span:after {
+	opacity: 1;
+	right: 0;
 }
 .About {
-  align-items: center;
-  appearance: none;
-  background-color: #90D8BB;
+  display: inline-block;
   border-radius: 4px;
-  border-width: 0;
-  box-sizing: border-box;
-  color: #ffffff;
+  background-color: #90D8BB;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-size: 35px;
+  padding: 20px;
+  width: 17%;
+  height: 14%;
+  transition: all 0.5s;
   cursor: pointer;
-  display: inline-flex;
-  font-family: "Courier",monospace;
-  height: 10%;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: shown;
-  padding-left: 16px;
-  padding-right: 16px;
   position: absolute;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow,transform;
-  font-size: 300%;
-  top: 2%;
-  left: 67.5%;
-  width: 10%;
+  margin: 5px;
+  z-index: 10;
+  left: 62.7%;
+  top: -0.7%;
 }
-	.Employees {
+.About span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+.About span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+.About:hover span {
+	padding-right: 25px;
+}
+.About:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+.Employees {
   display: inline-block;
   border-radius: 4px;
   background-color: #90D8BB;
@@ -163,7 +181,8 @@ img {
 	width: 0.2%;
 	height: 14%;
 	background-color: #ffffff;
-	left: 65%;
+	left: 62.82%;
+	z-index: 11;
 }
 .border2 {
 	position: absolute;
@@ -171,6 +190,7 @@ img {
 	height: 14%;
 	background-color: #ffffff;
 	left: 80%;
+	z-index: 11;
 }
 .border3 {
 	position: absolute;
@@ -178,6 +198,7 @@ img {
 	height: 14%;
 	background-color: #ffffff;
 	left: 97.5%;
+	z-index: 11;
 }
 
 .border4 {
@@ -186,7 +207,8 @@ img {
 	height: 14%;
 	background-color: #ffffff;
 	left: 55%;
-	z-index: 10;
+	left: 45.65%;
+	z-index: 11;
 }
 .dropdownarrow {
 	position: absolute;
@@ -221,6 +243,7 @@ img {
 	height: 2%;
 	width: 100%;
 	background-color: #777777;
+	z-index: 11;
 }
 
 @keyframes dropdown {
@@ -306,8 +329,8 @@ img {
 <div class="border2"></div>
 <div class="border3"></div>
 <div class="border4"></div>
-<button class="Home" onclick="home()">Home</button>
-<button class="About" onclick="about()">About Us</button>
+<button class="Home" onclick="home()"><span>Home</span></button>
+<button class="About" onclick="about()"><span>About Us</span></button>
 <button class="Employees" onclick="employees()"><span>Employees </span></button>
 <div class="dropdown">
 	<span>Projects</span>
