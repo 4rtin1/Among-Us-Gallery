@@ -103,6 +103,47 @@ body {
   left: 67.5%;
   width: 10%;
 }
+	.Employees {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #90D8BB;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-size: 35px;
+  padding: 20px;
+  width: 17%;
+  height: 14%;
+  transition: all 0.5s;
+  cursor: pointer;
+  position: absolute;
+  margin: 5px;
+  z-index: 10;
+  left: 45.5%;
+  top: -0.7%;
+}
+.Employees span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+.Employees span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+.Employees:hover span {
+	padding-right: 25px;
+}
+.Employees:hover span:after {
+	opacity: 1;
+	right: 0;
+}
 .logo {
 	position: absolute;
 	width: 10%;
@@ -244,7 +285,7 @@ img {
 </head>
 <body>
 <div class="topbar"></div>
-<button class="logo" onclick="home()"><img src="logo2.png" /></button>
+<button class="logo" onclick="home()"><img src="./Images/logo2.png" /></button>
 
 <script type="text/javascript">
 	function home() {
@@ -256,6 +297,9 @@ img {
 	function gallery() {
 		location.href = "gallery.html";
 	};
+	function employees() {
+		location.href = "employees.html"
+	};
 </script>
 
 <div class="border1"></div>
@@ -264,6 +308,7 @@ img {
 <div class="border4"></div>
 <button class="Home" onclick="home()">Home</button>
 <button class="About" onclick="about()">About Us</button>
+<button class="Employees" onclick="employees()"><span>Employees </span></button>
 <div class="dropdown">
 	<span>Projects</span>
 	<div class="dropdown-content">
