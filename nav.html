@@ -12,14 +12,13 @@ body {
   background: #90D8BB;
 }
 .dropdown {
-  position: absolute;
-  display: inline-block;
-  top: 4%;
-  left: 81.5%;
-  font-size: 300%;
-  color: #ffffff;
-  display: inline-flex;
-  font-family: "Courier",monospace;
+	position: absolute;
+	display: inline-block;
+	top: 4%;
+	left: 81.5%;
+	font-size: 300%;
+	color: #ffffff;
+	font-family: "Courier",monospace;
 }
 .dropdown-content {
   display: none;
@@ -33,9 +32,37 @@ body {
   animation-name: dropdown;
   animation-duration: 0.5s;
 }
-.dropdown:hover .dropdown-content {
+.projectbtn {
+  align-items: center;
+  appearance: none;
+  background-color: #90D8BB;
+  border-radius: 4px;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Courier",monospace;
+  height: 10%;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 100%;
+  width: 10%;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+	background-color: #3e8e41;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
   display: block;
 }
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
 .Home {
   display: inline-block;
   border-radius: 4px;
@@ -268,6 +295,21 @@ img {
 	function employees() {
 		location.href = "employees.html"
 	};
+	function drop() {
+		document.getElementById("dropdown2").classList.toggle("show");
+	};
+	window.onclick = function(event) {
+		if (!event.target.matches('.projectbtn')) {
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+			var i;
+			for (i = 0; i < dropdowns.length; i++) {
+				var openDropdown = dropdowns[i];
+				if (openDropdown.classList.contains('show')) {
+				openDropdown.classList.remove('show');
+				}
+			}
+		}
+	}
 </script>
 
 <div class="border1"></div>
@@ -278,8 +320,8 @@ img {
 <button class="About" onclick="about()"><span>About Us </span></button>
 <button class="Employees" onclick="employees()"><span>Employees </span></button>
 <div class="dropdown">
-	<span>Projects</span>
-	<div class="dropdown-content">
+	<button class="projectbtn" onclick="drop()">Projects</button>
+	<div id="dropdown2"class="dropdown-content">
 	<button class="Gallery" onclick="gallery()">Gallery</button>
 	<div class="border5"></div>
 	<div class="title">Projects:</div>
